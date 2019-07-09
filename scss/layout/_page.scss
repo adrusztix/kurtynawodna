@@ -1,0 +1,122 @@
+.page-top-header {
+	background: $brand-primary;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	@include tablet {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	h1 {
+		color: #fff;
+		font-family: 'BebasNeue';
+		font-size: 30px;
+		margin: 0;
+
+		@include tablet {
+			font-size: 48px;
+		}
+	}
+}
+
+#content {
+	margin-top: 40px;
+	
+	.main-content-area {
+		@include make-row();
+
+		// content
+
+		.content-area {
+			@include make-md-column(8);
+			@include make-lg-column(9);
+
+			@include desktop {
+				font-size: 16px;
+				line-height: 1.8;
+			}
+
+			p {
+				margin-bottom: 15px;
+			}
+		}
+
+		// sidebar
+
+		.widget-area {
+			@include make-md-column(4);
+			@include make-lg-column(3);
+
+			margin-top: 40px;
+
+			@include screen {
+				margin-top: 0;
+			}
+
+			.search-box {
+				margin-bottom: 40px;
+				margin-top: 0;
+			}
+
+			.widget-inner {
+				background: $gray;
+				padding: 30px;
+
+				.widget {
+					margin-bottom: 40px;
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+
+					.widget-title {
+						font-size: 30px;
+						font-family: 'BebasNeue';
+						color: $dark;
+						margin-bottom: 15px;
+						position: relative;
+
+						&:before {
+							content: '';
+							width: 80px;
+							background: $brand-secondary;
+							height: 2px;
+							position: absolute;
+							bottom: 0px;
+							left: 0;
+						}
+					}
+
+					ul {
+						margin: 0;
+						padding: 0;
+						list-style: none;
+
+						li {
+							line-height: 1.8;
+						}
+					}
+
+					.tagcloud {
+						a {
+							display: inline-block;
+							background: #fff;
+							border: 1px solid $brand-primary;
+							padding: 5px 10px;
+							margin-bottom: 5px;
+							margin-right: 1px;
+							font-size: 13px;
+
+							&:hover {
+								background: $brand-primary;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}		
+	}
+	
+}

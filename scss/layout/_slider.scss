@@ -1,0 +1,114 @@
+#slider {
+
+	.slide-1 {
+		background-image: url("../images/slider/1.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 33% 50%;
+		position: relative;
+
+		@include desktop {
+			background-position: 50% 50%;
+		}
+	}
+
+
+	.overlay {
+
+		&:after {
+			content: "";
+			z-index: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: none repeat 0 0 rgba(0, 0, 0, 0.2);
+		}		
+	}
+	
+	.slider-content {
+		color: #fff;
+		padding-top: 140px;
+		z-index: 1;
+		position: relative;
+		text-align: right;
+		height: 460px;
+
+		@include minitablet {
+			padding-top: 190px;
+			height: 600px;
+		}
+
+		@include fullhd {
+			padding-top: 230px;
+			height: 700px;
+		}
+
+		@include xfullhd {
+			padding-top: 285px;
+			height: 800px;
+		}
+		
+
+		h2 {
+			font-size: 30px;
+			font-weight: 300;
+			font-family: 'Open Sans Condensed';
+			text-transform: uppercase;
+			margin: 0 0 20px 0;
+
+			@include minitablet {
+				font-size: 48px;
+				margin-bottom: 40px;
+			}
+
+			@include fullhd {
+				font-size: 58px;
+			}
+		}
+
+		h3 {
+			font-size: 50px;
+			margin: 0 0 -10px 0;
+			font-family: 'BebasNeue', arial;
+
+			@include minitablet {
+				font-size: 80px;
+			}	
+
+			@include fullhd {
+				font-size: 100px;
+			}		
+		}
+
+
+		.btn {
+			display: block;
+			width: 180px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-left: auto;
+			margin-top: 25px;
+			@include border-radius(0px);
+
+		}
+
+		.btn-slider {
+			background: #fff;
+			border: 1px solid #fff;
+			color: $brand-primary;
+			font-size: 20px;
+
+			&:hover {
+				background: $dark;
+				color: #fff;
+			}
+
+			@include minitablet {
+				font-size: 24px;
+			}
+		}			
+
+	}		
+}

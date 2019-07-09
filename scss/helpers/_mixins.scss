@@ -1,0 +1,159 @@
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+@mixin border-radius ($radius){
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin custom-column ($widthProcent){
+  width: $widthProcent;
+  float: left;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+// podstawowe przejscie 0.2s
+@mixin basic-transition {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin contain {
+    background-size: contain;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+}
+
+@mixin cover {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+
+@mixin absolute-one-hundred-size {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin center-block {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;   
+  left: 0;
+  right: 0;
+}
+
+@mixin middle-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  
+}
+
+@mixin middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)  
+}
+
+@mixin middle-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);  
+}
+
+@mixin dark-overlay {
+  content: "";
+  z-index: 0;
+  @include absolute-one-hundred-size;
+  background: none repeat 0 0 rgba(30, 30, 30, 0.5);
+}
+
+@mixin padding {
+  padding: 15px;
+}
+
+@mixin padding-tb {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@mixin padding-lr {
+  padding-right: 15;
+  padding-left: 15px;
+}
+
+@mixin box-hover {
+  @include absolute-one-hundred-size;
+  overflow: hidden;
+  opacity: 0;
+  @include basic-transition;
+  z-index: 2;  
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);  
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin even(){
+  &:nth-child(even) {
+    @content;
+  }
+}
+
+@mixin each($num) {
+  &:nth-child(#{$num}n) {
+    @content;
+  }
+}
+
+@mixin no-margin {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@mixin reset-margin {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+@mixin no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

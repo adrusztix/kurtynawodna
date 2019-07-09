@@ -1,0 +1,120 @@
+// blog
+
+.blog-header-foto {
+
+	background-image: url("../images/slider/1.jpg");
+	@include cover;
+	background-repeat: no-repeat;
+	background-position: 33% 50%;
+	position: relative;
+
+	@include desktop {
+		background-position: 50% 50%;
+	}
+
+
+	.overlay-blog-header {
+
+		&:after {
+			content: "";
+			z-index: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: none repeat 0 0 rgba(0, 0, 0, 0.2);
+		}		
+	}
+	
+	.blog-header-content {
+		color: #fff;
+		padding-top: 120px;
+		z-index: 1;
+		position: relative;
+		text-align: right;
+		height: 320px;
+
+		@include minitablet {
+			padding-top: 85px;
+		}
+
+		@include fullhd {
+			padding-top: 65px;
+		}		
+
+		.blog-header-subtitle {
+			font-size: 30px;
+			font-weight: 300;
+			font-family: 'Open Sans Condensed';
+			text-transform: uppercase;
+
+			@include minitablet {
+				font-size: 48px;
+			}
+
+			@include fullhd {
+				font-size: 58px;
+			}
+		}
+
+		.blog-header-title {
+			font-size: 50px;
+			margin: 0 0 -10px 0;
+			font-family: 'BebasNeue', arial;
+
+			@include minitablet {
+				font-size: 80px;
+				margin-bottom: -25px;
+			}	
+
+			@include fullhd {
+				font-size: 100px;
+			}		
+		}		
+
+	}		
+}
+
+
+// wpis
+
+.blog-header {
+	background: $brand-secondary;
+}
+
+.entry-header {
+	img {
+		width: 100%;
+	}
+
+	.entry-meta {
+		margin-top: 20px;
+		margin-bottom: 40px;
+		position: relative;
+		font-size: 13px;
+
+		&:before {
+			content: '';
+			width: 80px;
+			background: $brand-secondary;
+			height: 2px;
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+		}	
+
+		.entry-data {
+			display: inline-block;
+			margin-right: 20px;
+
+			.fa {
+				margin-right: 5px;
+			}
+		}	
+
+		.entry-category {
+			display: inline-block;
+		}
+	}
+}

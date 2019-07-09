@@ -1,0 +1,69 @@
+$iphone: 320px;
+$phone: 480px;
+$minitablet: 600px;
+$tablet: 768px;
+$screen: 992px;
+$tablethor: 1024px;
+$desktop: 1200px;
+$laptop: 1366px;
+$semihd: 1680px;
+$fullhd: 1920px;
+$xfullhd: 2560px;
+
+
+
+@mixin iphone {
+  @media (min-width: #{$iphone}) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (min-width: #{$phone}) {
+    @content;
+  }
+}
+@mixin minitablet {
+  @media (min-width: #{$minitablet}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin screen {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+@mixin tablethor {
+  @media (min-width: #{$tablethor}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin fullhd {
+  @media (min-width: #{$fullhd}) {
+    @content;
+  }
+}
+@mixin xfullhd {
+  @media (min-width: #{$xfullhd}) {
+    @content;
+  }
+}
+@mixin semihd {
+  @media (min-width: #{$semihd}) {
+    @content;
+  }
+}

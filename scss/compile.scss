@@ -1,0 +1,42 @@
+// ---------------------
+//     GENERAL
+// ---------------------
+
+@import "helpers/variables-custom";
+@import "helpers/resolutions";
+@import "helpers/mixins";
+
+@import "base/bootstrap";
+@import "base/temp";
+
+// ---------------------
+//     COMPONENTS
+// ---------------------
+
+@import "components/bxslider";
+
+
+// ---------------------
+//     LAYOUT
+// ---------------------
+
+@import "layout/global";
+@import "layout/header";
+@import "layout/slider";
+@import "layout/page";
+@import "layout/post";
+@import "layout/footer";
+
+// ---------------------
+//     PAGES
+// ---------------------
+
+@import "pages/home";
+@import "pages/news";
+
+
+// ---------------------
+//     WOOCOMMERCE
+// ---------------------
+
+@import "woocommerce/shop";

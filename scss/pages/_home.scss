@@ -1,0 +1,196 @@
+#icon-box-wrapper {
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	@include desktop {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	.icon-box {
+		@include make-xs-column(12);
+		@include make-md-column(4);
+		text-align: center;
+		margin-bottom: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include screen {
+			margin-bottom: 0;
+		}
+
+		.fa {
+			color: $brand-primary;
+			font-size: 120px;
+		}
+
+		h2 {
+			font-size: 30px;
+			font-family: 'BebasNeue';
+			color: $dark;
+			margin: 15px 0;
+		}
+
+		p {
+			margin: 0;
+			font-size: 15px;
+			color: $brand-primary;
+			line-height: 1.7;
+
+			@include tablet {
+				font-size: 16px;
+			}			
+
+			@include screen {
+				font-size: 15px;
+			}
+
+			@include desktop {
+				font-size: 16px;
+			}			
+		}
+	}
+}
+
+// about
+
+#about {
+	background: $gray;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
+	margin-bottom: 60px;
+
+	@include desktop {
+		margin-bottom: 80px;
+	}
+
+	&:before {
+		content: '';
+		background: url('../images/bramka.png') no-repeat;
+		width: 1134px;
+		height: 714px;
+		@include middle-x;
+		display: none;		
+
+		@include desktop {
+			display: block;
+		}
+	}
+
+	.bramka {
+		@include desktop {
+			padding: 95px 180px;
+		}		
+	}
+
+	h3 {
+		font-size: 24px;
+		color: $dark;
+		font-family: "BebasNeue";
+		line-height: 1.4;
+		margin-top: 0;
+		margin-bottom: 30px;
+
+		@include tablet {
+			font-size: 30px;
+			line-height: 1.1;
+		}
+	}
+
+	p {
+		margin-bottom: 20px;
+
+		@include tablet {
+			font-size: 16px;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+// statistics
+
+.overlay-statistics {
+
+	&:after {
+		content: "";
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: none repeat 0 0 rgba(0, 0, 0, 0.2);
+	}		
+}    
+
+#statistics {
+    background: url('../images/parallax.jpg') no-repeat;
+    background-position: 50% 50%;
+    @include cover;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    position: relative;
+
+    @include desktop {
+    	background-attachment: fixed;
+    	margin-bottom: 80px;
+    	margin-top: 40px;
+    }
+
+    .container {
+        padding: 50px 15px;
+        position: relative;
+        z-index: 1;
+
+        @include desktop {
+        	padding: 100px 15px;
+        } 
+
+        @include fullhd {
+        	padding-top: 130px;
+        	padding-bottom: 130px;
+        }
+
+        @include xfullhd {
+        	padding-top: 160px;
+        	padding-bottom: 160px;
+        }        
+
+        .statistics-item {
+        	margin-bottom: 60px;
+        	@include make-xs-column(12);
+        	@include make-md-column(4);
+
+        	@include screen {
+        		margin-bottom: 0;
+        	}
+
+        	&:last-child {
+        		margin-bottom: 0;
+        	}
+
+        	.statistics-value {
+        		font-size: 120px;
+        		font-weight: 900;
+        	}
+
+        	p {
+        		font-family: 'BebasNeue';
+        		font-size: 40px;
+        		line-height: 1.2;
+        	}
+        }        
+
+    }
+}
+
+.clients {
+	margin-top: 40px;
+}
+
+

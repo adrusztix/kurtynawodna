@@ -1,0 +1,8 @@
+.box {
+	@include make-row();
+
+	.test {
+		@include make-md-column(4);
+		background: #ccc;
+	}
+}

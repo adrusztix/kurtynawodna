@@ -1,0 +1,72 @@
+// products box home
+.product-box-home {
+	@include make-xs-column(12);
+	@include minitablet {
+		@include custom-column(50%);
+	}
+	@include tablethor {
+		@include custom-column(25%);
+	}
+
+	text-align: center;
+}
+
+// shop
+
+.product-box {
+	@include make-xs-column(12);
+	@include minitablet {
+		@include custom-column(50%);
+	}
+	@include make-lg-column(4);
+
+	margin-bottom: 40px;
+	text-align: center;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}	
+}
+
+
+// globals
+
+.products {
+	margin-bottom: 40px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	img {
+		object-fit: cover;
+		height: 260px;
+		width: 100%;
+
+		@include desktop {
+			height: 260px;
+		}
+	}
+
+	h2 {
+		font-family: 'Open Sans Condensed';
+		font-size: 30px;
+	}
+
+	.product-price {
+		color: $dark;
+		font-family: 'BebasNeue';
+		font-size: 36px;
+		margin-bottom: 10px;
+	}
+
+	.btn {
+		display: block;
+	}
+
+	.btn-white {
+		@include minitablet {
+			display: inline-block;
+		}
+	}
+}
